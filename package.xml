@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package>
+    <name>NightlyDev_SSLReminder</name>
+    <version>1.0.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://livense.nightlydev.org">GNU General Public License (GPLv3)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Receive an Email alert before your SSL Certificate expires.&#xD;
+Includes optionally a SHA1 Fingerprint validation.</summary>
+    <description>This extension for Magento allows you to forget about your SSL Certificate renewal date.&#xD;
+&#xD;
+You can setup a time (1/2/3 day/week/month) before the expiration date to receive an email alert with a customized message, were you can add the contact details of your SSL provider or the IT department, or the instructions to renew the certificate.&#xD;
+&#xD;
+Also you can enable the validation of the SHA1 Fingerprint of your SSL Certificate to increase the security of your eCommerce&#xD;
+&#xD;
+Finally, heres an option to view the details of your current installed SSL Certificate in order to debug or check anything needed.</description>
+    <notes>This extension for Magento allows you to forget about your SSL Certificate renewal date.&#xD;
+&#xD;
+You can setup a time (1/2/3 day/week/month) before the expiration date to receive an email alert with a customized message, were you can add the contact details of your SSL provider or the IT department, or the instructions to renew the certificate.&#xD;
+&#xD;
+Also you can enable the validation of the SHA1 Fingerprint of your SSL Certificate to increase the security of your eCommerce&#xD;
+&#xD;
+Finally, heres an option to view the details of your current installed SSL Certificate in order to debug or check anything needed.</notes>
+    <authors><author><name>Carles Tubio</name><user>nightlydev</user><email>input@nightlydev.org</email></author></authors>
+    <date>2014-05-23</date>
+    <time>20:35:33</time>
+    <contents><target name="magecommunity"><dir name="NightlyDev"><dir name="SSLReminder"><dir name="Block"><dir name="Adminhtml"><dir name="Button"><file name="Fingerprint.php" hash="ecd672c96e11a1b2c7828b0bc3ee6abf"/><file name="Viewer.php" hash="73aa7b0b72eaa35bc4bef788d9054660"/></dir></dir></dir><dir name="Helper"><file name="Data.php" hash="93ca7032d3216473d39123056babff5b"/></dir><dir name="Model"><dir name="Adminhtml"><dir name="System"><dir name="Config"><dir name="Source"><file name="Time.php" hash="f67c6b78d617ebaeb4967ed43fb10803"/></dir></dir></dir></dir><file name="Cron.php" hash="f4d096b8fa89960853741a5fd9241760"/></dir><dir name="controllers"><file name="NightlydevsslreminderController.php" hash="8ab253b7d481737fb48cac51c3135e47"/></dir><dir name="etc"><file name="config.xml" hash="c8f5c58fc3924ea5be989df9f47beddd"/><file name="system.xml" hash="3d6d0f21e2688208181bf6262c3914c8"/></dir></dir><file name="LICENSE" hash="d32239bcb673463ab874e80d47fae504"/></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="nightlydev"><dir name="template"><dir name="sslreminder"><dir name="adminhtml"><dir name="button"><file name="fingerprint.phtml" hash="5f2c066b513e08b8edbef5df52abde42"/><file name="viewer.phtml" hash="8786310f727f92d3f7c37b9277d2c5cc"/></dir></dir></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="NightlyDev_SSLReminder.xml" hash="5fd6021dcd2b945dca5d723c459c2c2e"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.0.0</min><max>5.5.5</max></php></required></dependencies>
+</package>

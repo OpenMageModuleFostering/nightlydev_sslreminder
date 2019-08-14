@@ -1,0 +1,16 @@
+<?php /* var $this Mage_Adminhtml_Block_System_Config_System_Storage_Media_Synchronize */ ?>
+<script type="text/javascript">
+//<![CDATA[
+		function get_fingerprint() {
+      new Ajax.Request("<?php echo $this->getFingerprintUrl() ?>", {onSuccess: function(response) {if (response.status==200 && response.responseText && response.responseText.length==40) $('system_nightlydevsslvalidator_fingerprint').value = response.responseText ;}});
+    }
+		function toggle_fingerprint() {
+      $('nightlydevsslreminder_get_fingerprint')[$('system_nightlydevsslvalidator_enabled').value=="1"?'show':'hide']();
+      $('nightlydevsslreminder_get_fingerprint_note')[$('system_nightlydevsslvalidator_enabled').value=="1"?'show':'hide']();
+    }
+    Event.observe(window, 'load', function(){toggle_fingerprint();});
+    Event.observe($('system_nightlydevsslvalidator_enabled'), 'change', function(){toggle_fingerprint();});
+//]]>
+</script>
+<?php echo $this->getButtonHtml() ?>
+<p id="nightlydevsslreminder_get_fingerprint_note" class="note"><span>of the current SSL Certificate from the current store at <?php echo Mage::getStoreConfig('web/secure/base_url') ?>.</span></p>

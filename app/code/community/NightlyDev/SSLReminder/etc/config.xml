@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+      <NightlyDev_SSLReminder>
+          <version>1.0.0.0</version>
+      </NightlyDev_SSLReminder>
+  </modules>
+  <crontab>
+    <jobs>
+      <nightlydevsslreminder>
+        <schedule>
+            <cron_expr>0 3 * * *</cron_expr>
+        </schedule>
+        <run>
+          <model>nightlydevsslreminder/cron::run</model>
+        </run>
+      </nightlydevsslreminder>
+    </jobs>
+  </crontab>
+  <global>
+    <models>
+      <nightlydevsslreminder>
+          <class>NightlyDev_SSLReminder_Model</class>
+      </nightlydevsslreminder>
+    </models>
+    <helpers>
+      <nightlydevsslreminder>
+          <class>NightlyDev_SSLReminder_Helper</class>
+      </nightlydevsslreminder>
+    </helpers>
+    <blocks>
+      <nightlydevsslreminder>
+          <class>NightlyDev_SSLReminder_Block</class>
+      </nightlydevsslreminder>
+    </blocks>
+  </global>
+  <admin>
+    <routers>
+      <adminhtml>
+        <args>
+          <modules>
+            <nightlydevsslreminder before="Mage_Adminhtml">NightlyDev_SSLReminder</nightlydevsslreminder>
+          </modules>
+        </args>
+      </adminhtml>
+    </routers>
+  </admin>
+  <default>
+    <system>
+      <nightlydevsslreminder>
+        <enabled>0</enabled>
+        <time>+1 month</time>
+        <message>To renew the SSL cert, call that friendly guy at the IT department (secret phone at ext. 007).</message>
+      </nightlydevsslreminder>
+      <nightlydevsslvalidator>
+        <enabled>0</enabled>
+      </nightlydevsslvalidator>
+    </system>
+  </default>
+</config>

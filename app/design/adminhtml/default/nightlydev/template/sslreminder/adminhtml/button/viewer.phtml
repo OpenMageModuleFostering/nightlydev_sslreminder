@@ -1,0 +1,14 @@
+<?php /* var $this Mage_Adminhtml_Block_System_Config_System_Storage_Media_Synchronize */ ?>
+<script type="text/javascript">
+//<![CDATA[
+  function get_sslinfo() {
+    new Ajax.Updater('sslviewer_content', "<?php echo $this->getInfoUrl(); ?>", {method: 'get'});
+  }
+//]]>
+</script>
+<style>
+hr {margin-bottom:20px;}
+</style>
+<?php echo $this->getButtonHtml() ?>
+<div id="sslviewer_content" style="margin-left:-60px;width:610px;font-family:courier new;text-align:center;padding-top:20px;"></div>
+<div style="clear:both;"></div>
