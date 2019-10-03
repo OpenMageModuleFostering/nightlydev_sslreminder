@@ -1,17 +1,5 @@
 {
-    "name": "OpenMageModuleFostering/NightlyDev_SSLReminder",
-    "type": "magento-module",
-    "license": "GNU-General-Public-License-(GPLv3)",
-    "homepage": "",
-    "description": "Receive an Email alert before your SSL Certificate expires.
-Includes optionally a SHA1 Fingerprint validation.",
-    "authors": [
-    {
-        "name": "Carles Tubio",
-        "email": "input@nightlydev.org"
-    }
-],
-    "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+    "keywords": [
+        "openmage-module"
+    ]
 }
